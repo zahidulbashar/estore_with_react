@@ -40,7 +40,7 @@ const Footer = () => {
             </ul>
           </div>
           </div>
-          <div className="social_icons text-white flex justify-center gap-x-6 mt-8 text-3xl md:justify-start">
+          <div className="social_icons text-white flex justify-center gap-x-6 mt-8 text-3xl md:justify-start md:mt-6 md:text-xl">
             <FaTwitter/>
             <FaFacebookF/>
             <FaTiktok/>
