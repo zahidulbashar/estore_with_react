@@ -4,12 +4,12 @@ import Search from '/search.svg'
 import Wishlist from '/wishlist.svg'
 import Cart from '/cart.svg'
 import User from '/user.svg'
-import { NavLink } from 'react-router'
+import { Link, NavLink } from 'react-router'
 const Header = () => {
   return (
    <section id="header" className="max-w-[1120px] mx-auto h-[88px] flex justify-between items-center">
 <div className="logo w-[65px]">
-  <img src={Logo} alt="Logo" className='w-full'/>
+  <Link to='/'><img src={Logo} alt="Logo" className='w-full'/></Link>
 </div>
 <div className="search bg-searchBgColor flex items-center gap-x-2  px-4 h-14 rounded-lg w-[25vw]">
   <img src={Search} alt="Search" className='w-4 h-4'/>
@@ -17,16 +17,24 @@ const Header = () => {
 </div>
 <div className="menu">
   <ul className='flex gap-x-12'>
-    <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='about'>About</NavLink></li>
-    <li><NavLink to='contact'>Contact us</NavLink></li>
-    <li><NavLink to='blog'>Blog</NavLink></li>
+    <li><NavLink style={({ isActive }) => ({
+    fontWeight: isActive ? "bold" : "normal",
+  })} to='/'>Home</NavLink></li>
+    <li><NavLink style={({ isActive }) => ({
+    fontWeight: isActive ? "bold" : "normal",
+  })} to='about'>About</NavLink></li>
+    <li><NavLink style={({ isActive }) => ({
+    fontWeight: isActive ? "bold" : "normal",
+  })} to='contact'>Contact us</NavLink></li>
+    <li><NavLink style={({ isActive }) => ({
+    fontWeight: isActive ? "bold" : "normal",
+  })} to='blog'>Blog</NavLink></li>
   </ul>
 </div>
 <div className="icons flex gap-6">
-<img src={Wishlist} alt="" className='w-5 h-5'/>
-<img src={Cart} alt="" className='w-5 h-5'/>
-<img src={User} alt="" className='w-5 h-5'/>
+<img src={Wishlist} alt="" className='w-5 h-5 cursor-pointer'/>
+<img src={Cart} alt="" className='w-5 h-5 cursor-pointer'/>
+<img src={User} alt="" className='w-5 h-5 cursor-pointer'/>
 </div>
    </section>
   )
