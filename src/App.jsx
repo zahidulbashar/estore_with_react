@@ -12,9 +12,9 @@ const App = () => {
   <Routes>
     <Route element={<RootLayout/>}>
     <Route path="/" element={<Home/>}/>
-    <Route path="About" element={ <About/>}/>
-    <Route path="Contact" element={ <Contact/>}/>
-    <Route path="Blog" element={ <Blog/>}/>
+    <Route path="about" element={ <About/>}/>
+    <Route path="contact" element={ <Contact/>}/>
+    <Route path="blog" element={ <Blog/>}/>
     </Route>
   </Routes>
   </>

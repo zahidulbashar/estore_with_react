@@ -4,6 +4,7 @@ import Search from '/search.svg'
 import Wishlist from '/wishlist.svg'
 import Cart from '/cart.svg'
 import User from '/user.svg'
+import { NavLink } from 'react-router'
 const Header = () => {
   return (
    <section id="header" className="max-w-[1120px] mx-auto h-[88px] flex justify-between items-center">
@@ -16,10 +17,10 @@ const Header = () => {
 </div>
 <div className="menu">
   <ul className='flex gap-x-12'>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-    <li>Blog</li>
+    <li><NavLink to='/'>Home</NavLink></li>
+    <li><NavLink to='about'>About</NavLink></li>
+    <li><NavLink to='contact'>Contact us</NavLink></li>
+    <li><NavLink to='blog'>Blog</NavLink></li>
   </ul>
 </div>
 <div className="icons flex gap-6">
